@@ -30,20 +30,9 @@ PRODUCT_MANUFACTURER := micromax
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PATITIONS := true
 
-# Health
-PRODUCT_PACKAGES += \
-     android.hardware.health@2.1-impl
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
 
 # fastbootd
 PRODUCT_PACKAGES += \
      android.hardware.fastboot@1.0-impl-mock
-
-# HACK: Set vendor patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31
