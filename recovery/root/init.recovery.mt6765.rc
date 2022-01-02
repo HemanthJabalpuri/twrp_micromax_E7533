@@ -38,11 +38,20 @@ service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     disabled
     seclabel u:r:recovery:s0
 
+service keymaster_attestation-1-1 /vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
+    interface vendor.mediatek.hardware.keymaster_attestation@1.1::IKeymasterDevice default
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
 on property:hwservicemanager.ready=true
     start keymaster-4-0
     start gatekeeper-1-0
+    # start keymaster_attestation-1-1
 
 on property:twrp.all.users.decrypted=true
     stop teed
     stop keymaster-4-0
     stop gatekeeper-1-0
+    # stop keymaster_attestation-1-1
