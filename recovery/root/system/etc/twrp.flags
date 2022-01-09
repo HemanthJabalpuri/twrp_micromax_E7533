@@ -6,20 +6,13 @@
 /cache          ext4    /dev/block/platform/bootdevice/by-name/cache
 /persist        ext4    /dev/block/platform/bootdevice/by-name/persist
 /metadata       ext4    /dev/block/platform/bootdevice/by-name/md_udc
-/persistent     emmc    /dev/block/platform/bootdevice/by-name/frp
-/gz1            emmc    /dev/block/platform/bootdevice/by-name/gz1
-/gz2            emmc    /dev/block/platform/bootdevice/by-name/gz2
-/spmfw          emmc    /dev/block/platform/bootdevice/by-name/spmfw
-/tee2           emmc    /dev/block/platform/bootdevice/by-name/tee2
-/sspm_1         emmc    /dev/block/platform/bootdevice/by-name/sspm_1
-/sspm_2         emmc    /dev/block/platform/bootdevice/by-name/sspm_2
 
-/protect_f      ext4    /dev/block/platform/bootdevice/by-name/protect1    flags=backup
-/protect_s      ext4    /dev/block/platform/bootdevice/by-name/protect2    flags=backup
-/nvdata         ext4    /dev/block/platform/bootdevice/by-name/nvdata      flags=backup
-/nvcfg          ext4    /dev/block/platform/bootdevice/by-name/nvcfg       flags=backup
+/protect_f      emmc    /dev/block/platform/bootdevice/by-name/protect1    flags=backup
+/protect_s      emmc    /dev/block/platform/bootdevice/by-name/protect2    flags=backup
+/nvdata         emmc    /dev/block/platform/bootdevice/by-name/nvdata      flags=backup
+/nvcfg          emmc    /dev/block/platform/bootdevice/by-name/nvcfg       flags=backup
 /nvram          emmc    /dev/block/platform/bootdevice/by-name/nvram       flags=backup
-/proinfo        emmc    /dev/block/platform/bootdevice/by-name/proinfo
+/proinfo        emmc    /dev/block/platform/bootdevice/by-name/proinfo     flags=backup
 
 # Removable
 /external_sd    auto    /dev/block/mmcblk1p1    	/dev/block/mmcblk1
